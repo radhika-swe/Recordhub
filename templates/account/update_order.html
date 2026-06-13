@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %} 
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <h4><div class="card-title">Customer name</div></h4>
+    <h5> <div class="card-title">{{customer_name}}</div></h5>
+    <form action =""method="POST">
+     {% csrf_token %}   
+
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">Order Id:- {{order.id}}</li>
+    <li class="list-group-item">Product Name :- {{form.product}}</li>
+    <li class="list-group-item">Status :- {{form.status}}</li>
+  </ul>
+  <div class="card=body">
+    <a href="{% url 'home' %}" class ="card-link">Back</a>
+    <input type="submit" name="submit">
+  </div>
+
+</form>
+</div>
+
+{% endblock %}

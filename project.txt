@@ -1,0 +1,30 @@
+System design 
+
+Customer Operation 
+1.Add Customer              yes
+2.View all Customer         yes
+3.View Customer Details     yes
+4.View Customer Orders      yes
+5.Update Customer           no
+6.Delete Customer           no
+
+
+
+Product Operation
+1.Add Product
+2.View Product list
+3.View Product Details
+4.Update Product
+5.Delete Product
+6.Filter by Category/tags   no
+
+
+Order Details
+1.Create Order
+2.View all Order
+3.Update Order Status
+4.Delete Order
+
+Tag Operation
+1.Add tags
+2.Assign tags to Product

@@ -1,0 +1,52 @@
+{%  extends 'main.html' %}
+
+{% block content %}
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<a class="btn btn-primary btn-sm btn-block" href="{% url 'add_product' %}">Add Product</a>
+					<h5>Products</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Product</th>
+							<th>Category</th>
+                            <th>Description</th>
+                            <th>Date Created</th>
+                            <th>Product Tags</th>
+							<th>Price</th>
+							<th>Image</th>
+							<th>Update</th>
+							<th>Delete</th>
+						</tr>
+
+						{% for i in product %}
+							<tr>
+								<td>{{i.name}}</td>
+								<td>{{i.category}}</td> 
+                                <td>{{i.description}}</td>   
+                                <td>{{i.date_created}}</td>  
+                                <td>{% for tag in i.tags.all %}{{tag.name}}{% endfor %}</td>
+								<td>{{i.price}}</td>
+								<td>
+									{% if i.pic %}
+									<img src="{{ i.pic.url }}" height="50" width="50">
+									{% endif %}
+								</td>
+								<td><a href="{% url 'update_product' i.id %}">Update</a></td>
+								<td><a href="{% url 'delete_product' i.id %}">Delete</a></td>
+								
+							</tr>
+						{% endfor %}
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+{% endblock content %}
