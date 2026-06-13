@@ -8,18 +8,17 @@ venv/
 env/
 .venv/
 
-# Django database (local only)
+# Django database file ONLY
 db.sqlite3
-db/
 *.sqlite3
 
-# VS Code settings
+# VS Code
 .vscode/
 
 # Environment variables
 .env
 
-# Media uploads (optional for deployment)
+# Media uploads (optional)
 media/
 
 # OS files
