@@ -1,0 +1,22 @@
+    body{
+    background-color: rgb(44, 138, 138);
+    }
+    #total-orders{
+        background-color: rgb(34, 140, 158);
+    }
+     #total-orders:hover{
+        transform: translate(-5px);
+        box-shadow: 0 10px 20px rgba(76, 149, 244, 0.444);
+        cursor: pointer;
+
+    }
+    #orders-delivered{
+        background-color: rgb(24, 142, 178);
+    }
+    #orders-pending{
+        background-color: rgb(14, 144, 193);
+    }
+    #out_for_delivery {
+        background-color: rgb(4, 146, 213);
+    }
+    
