@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-wls8hoaoc&6%*qb^gpze6$6q5szn9uadj0o%5y0^mrzrfw3*$j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["recordhub-1.onrender.com"]
 
 # Application definition
 
@@ -50,6 +49,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ...
 ]
 
 ROOT_URLCONF = 'db.urls'
@@ -118,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL=  '/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
