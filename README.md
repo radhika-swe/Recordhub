@@ -108,6 +108,12 @@ http://127.0.0.1:8000/admin
 
 ---
 
+DEMO RUN:
+username=admin
+password=admin123
+
+---
+
 ## 📌 Notes
 
 * Do NOT commit `venv/` or `db.sqlite3`
