@@ -108,7 +108,7 @@ http://127.0.0.1:8000/admin
 
 ---
 
-##DEMO RUN:
+## DEMO RUN:
     *username=admin
     *password=admin123
 
